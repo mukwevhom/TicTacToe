@@ -1,0 +1,69 @@
+.game-header {
+    text-align: center;
+}
+
+.game-wrapper {
+    display: grid;
+    grid-auto-columns: 150px;
+    grid-template-columns: 150px 150px 150px;
+    justify-content: center;
+}
+
+.square {
+    height: 150px;
+    text-align: center;
+    border: 3px solid black;
+    position: relative;
+    cursor: pointer;
+}
+
+.square::before {
+    content: "";
+    font-size: 70px;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.square.x::before {
+    content: "x";
+}
+
+.square.o::before {
+    content: "o";
+}
+
+.top {
+    border-top: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.game-score {
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+    margin: 50px 0 0;
+    text-align: center;
+}
+
+.score-block .score-title {
+    font-size: 27px;
+}
+
+.score-block .score-value {
+    font-size: 24px;
+}
